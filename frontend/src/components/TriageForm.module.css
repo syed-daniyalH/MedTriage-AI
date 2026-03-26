@@ -1,0 +1,221 @@
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.formIntro {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  background: var(--surface-muted);
+  border: 1px solid rgba(27, 39, 49, 0.08);
+}
+
+.sectionEyebrow {
+  margin: 0;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font: 600 0.72rem/1 var(--font-body), sans-serif;
+}
+
+.sectionHeading {
+  margin: 0.45rem 0 0;
+  color: var(--text-strong);
+  font: 700 1.1rem/1.2 var(--font-body), sans-serif;
+}
+
+.sectionText {
+  margin: 0.42rem 0 0;
+  color: var(--text-soft);
+  font: 500 0.92rem/1.5 var(--font-body), sans-serif;
+}
+
+.introBadge {
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  background: rgba(20, 86, 79, 0.1);
+  color: #14564f;
+  font: 700 0.8rem/1 var(--font-body), sans-serif;
+}
+
+.feedbackBanner {
+  margin: 0;
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  font: 600 0.9rem/1.45 var(--font-body), sans-serif;
+}
+
+.feedbackSuccess {
+  background: rgba(18, 104, 78, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(18, 104, 78, 0.15);
+}
+
+.feedbackError {
+  background: rgba(170, 37, 54, 0.08);
+  color: var(--error);
+  border: 1px solid rgba(170, 37, 54, 0.15);
+}
+
+.formSection {
+  border-radius: 18px;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(27, 39, 49, 0.08);
+}
+
+.sectionHeader {
+  margin-bottom: 0.85rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: var(--text-strong);
+  font: 700 1rem/1.2 var(--font-body), sans-serif;
+}
+
+.sectionHint {
+  margin: 0.35rem 0 0;
+  color: var(--text-soft);
+  font: 500 0.9rem/1.45 var(--font-body), sans-serif;
+}
+
+.grid {
+  display: grid;
+  gap: 0.95rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.labelRow span {
+  color: var(--text-strong);
+  font: 600 0.92rem/1.2 var(--font-body), sans-serif;
+}
+
+.fieldMeta {
+  color: var(--text-soft);
+  font: 600 0.73rem/1 var(--font-body), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.input,
+.inputError {
+  width: 100%;
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  color: var(--text-strong);
+  background: #ffffff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  font: 500 0.98rem/1.4 var(--font-body), sans-serif;
+}
+
+.input {
+  border: 1px solid rgba(27, 39, 49, 0.18);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(30, 122, 111, 0.14);
+}
+
+.inputError {
+  border: 1px solid var(--error);
+  box-shadow: 0 0 0 4px rgba(170, 37, 54, 0.12);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 122px;
+}
+
+.hintText {
+  margin: 0;
+  color: var(--text-soft);
+  font: 500 0.82rem/1.45 var(--font-body), sans-serif;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--error);
+  font: 600 0.84rem/1.4 var(--font-body), sans-serif;
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.primaryAction {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e7a6f 0%, #14564f 100%);
+  color: #f5fffd;
+  cursor: pointer;
+  padding: 0.9rem 1.3rem;
+  font: 700 0.95rem/1 var(--font-body), sans-serif;
+  letter-spacing: 0.01em;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.primaryAction:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(20, 86, 79, 0.2);
+}
+
+.primaryAction:active {
+  transform: translateY(0);
+}
+
+.primaryAction:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.submitNote {
+  margin: 0;
+  color: var(--text-soft);
+  font: 500 0.84rem/1.45 var(--font-body), sans-serif;
+}
+
+@media (max-width: 900px) {
+  .formIntro {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonRow {
+    align-items: stretch;
+  }
+
+  .primaryAction {
+    width: 100%;
+  }
+}

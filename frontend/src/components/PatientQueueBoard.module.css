@@ -1,0 +1,141 @@
+.pageWrap {
+  min-height: 100vh;
+  padding: clamp(1.15rem, 4vw, 3rem);
+}
+
+.boardCard {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  border-radius: 22px;
+  border: 1px solid rgba(27, 39, 49, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 52px rgba(19, 37, 56, 0.13);
+  padding: clamp(1.1rem, 2.4vw, 2rem);
+  animation: riseIn 420ms ease-out;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.kicker {
+  margin: 0;
+  color: #14564f;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font: 600 0.72rem/1 var(--font-body), sans-serif;
+}
+
+.heading {
+  margin: 0.4rem 0 0;
+  color: var(--text-strong);
+  font: 700 clamp(1.45rem, 2.5vw, 2rem) / 1.2 var(--font-heading), serif;
+}
+
+.subheading {
+  margin: 0.55rem 0 0;
+  max-width: 640px;
+  color: var(--text-soft);
+  font: 500 0.98rem/1.5 var(--font-body), sans-serif;
+}
+
+.refreshButton {
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #1e7a6f 0%, #14564f 100%);
+  color: #f5fffd;
+  cursor: pointer;
+  padding: 0.8rem 1.08rem;
+  font: 700 0.9rem/1 var(--font-body), sans-serif;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.refreshButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(20, 86, 79, 0.2);
+}
+
+.refreshButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.8rem;
+}
+
+.searchField,
+.filterField {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.searchField span,
+.filterField span {
+  color: var(--text-strong);
+  font: 600 0.88rem/1.2 var(--font-body), sans-serif;
+}
+
+.searchField input,
+.filterField select {
+  width: 100%;
+  border: 1px solid rgba(27, 39, 49, 0.22);
+  border-radius: 10px;
+  padding: 0.72rem 0.82rem;
+  color: var(--text-strong);
+  background: #ffffff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  font: 500 0.95rem/1.4 var(--font-body), sans-serif;
+}
+
+.searchField input:focus,
+.filterField select:focus {
+  outline: none;
+  border-color: #1e7a6f;
+  box-shadow: 0 0 0 4px rgba(30, 122, 111, 0.14);
+}
+
+.metaText {
+  margin: 0;
+  color: var(--text-soft);
+  font: 500 0.86rem/1.4 var(--font-body), sans-serif;
+}
+
+.metaRow {
+  margin-top: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.resultText {
+  margin: 0;
+  color: #355164;
+  font: 600 0.86rem/1.4 var(--font-body), sans-serif;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

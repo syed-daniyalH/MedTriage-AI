@@ -1,0 +1,93 @@
+.pageWrap {
+  min-height: 100vh;
+  padding: clamp(1.2rem, 4vw, 3rem);
+  display: grid;
+  place-items: center;
+}
+
+.screenCard {
+  width: min(700px, 100%);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(27, 39, 49, 0.12);
+  box-shadow: 0 22px 55px rgba(20, 35, 48, 0.14);
+  padding: clamp(1.2rem, 3vw, 2.2rem);
+  animation: riseIn 420ms ease-out;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: #14564f;
+  font: 600 0.72rem/1 var(--font-body), sans-serif;
+}
+
+.heading {
+  margin: 0.45rem 0 0;
+  color: var(--text-strong);
+  font: 700 clamp(1.5rem, 2.8vw, 2.2rem) / 1.2 var(--font-heading), serif;
+}
+
+.metaText {
+  margin: 0.35rem 0 1rem;
+  color: var(--text-soft);
+  font: 500 0.9rem/1.4 var(--font-body), sans-serif;
+}
+
+.caseSummary {
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+  background: var(--surface-muted);
+  border: 1px solid rgba(27, 39, 49, 0.08);
+}
+
+.caseMeta {
+  margin: 0;
+  color: #355164;
+  font: 700 0.82rem/1.3 var(--font-body), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.caseDescription {
+  margin: 0.4rem 0 0;
+  color: var(--text-strong);
+  font: 500 0.95rem/1.5 var(--font-body), sans-serif;
+}
+
+.successText {
+  margin: 0.95rem 0 0;
+  color: #12684e;
+  font: 600 0.92rem/1.4 var(--font-body), sans-serif;
+}
+
+.queueLink {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #14564f;
+  text-decoration: none;
+  font: 600 0.92rem/1 var(--font-body), sans-serif;
+}
+
+.queueLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .screenCard {
+    border-radius: 16px;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,162 @@
+.tableWrap {
+  margin-top: 0.85rem;
+  border-radius: 16px;
+  border: 1px solid rgba(27, 39, 49, 0.14);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.queueTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.queueTable thead {
+  background: #eff7f3;
+}
+
+.queueTable th {
+  text-align: left;
+  padding: 0.88rem 0.95rem;
+  color: #203646;
+  font: 700 0.8rem/1.1 var(--font-body), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.queueTable td {
+  border-top: 1px solid rgba(27, 39, 49, 0.09);
+  padding: 0.9rem 0.95rem;
+  color: #273745;
+  font: 500 0.93rem/1.45 var(--font-body), sans-serif;
+  vertical-align: top;
+}
+
+.queueTable tbody tr {
+  transition: background-color 160ms ease;
+}
+
+.queueTable tbody tr:hover {
+  background: rgba(239, 247, 243, 0.7);
+}
+
+.tokenText {
+  font: 700 0.92rem/1.2 var(--font-body), sans-serif;
+  color: #203646;
+}
+
+.priorityCritical,
+.priorityHigh,
+.priorityModerate,
+.priorityLow,
+.statusWaiting,
+.statusReview,
+.statusCompleted {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font: 700 0.78rem/1 var(--font-body), sans-serif;
+  white-space: nowrap;
+}
+
+.priorityCritical {
+  background: rgba(185, 32, 53, 0.14);
+  color: #8f1a2d;
+}
+
+.priorityHigh {
+  background: rgba(208, 106, 27, 0.16);
+  color: #9a4f13;
+}
+
+.priorityModerate {
+  background: rgba(27, 124, 138, 0.17);
+  color: #17616e;
+}
+
+.priorityLow {
+  background: rgba(34, 132, 86, 0.16);
+  color: #1c7249;
+}
+
+.statusWaiting {
+  background: rgba(120, 133, 148, 0.14);
+  color: #44586a;
+}
+
+.statusReview {
+  background: rgba(49, 121, 211, 0.15);
+  color: #235d9f;
+}
+
+.statusCompleted {
+  background: rgba(34, 132, 86, 0.16);
+  color: #1c7249;
+}
+
+.emptyText {
+  margin: 0;
+  padding: 1.2rem;
+  color: var(--text-soft);
+  text-align: center;
+  font: 500 0.92rem/1.5 var(--font-body), sans-serif;
+}
+
+@media (max-width: 900px) {
+  .tableWrap {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .tableWrap {
+    overflow: visible;
+    border: none;
+    background: transparent;
+  }
+
+  .queueTable,
+  .queueTable tbody,
+  .queueTable tr,
+  .queueTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .queueTable thead {
+    display: none;
+  }
+
+  .queueTable tbody {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .queueTable tr {
+    border-radius: 16px;
+    border: 1px solid rgba(27, 39, 49, 0.1);
+    background: #ffffff;
+    padding: 0.35rem 0.9rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .queueTable td {
+    display: grid;
+    grid-template-columns: minmax(96px, 112px) 1fr;
+    gap: 0.7rem;
+    padding: 0.62rem 0;
+    border-top: 1px solid rgba(27, 39, 49, 0.08);
+  }
+
+  .queueTable td:first-child {
+    border-top: none;
+  }
+
+  .queueTable td::before {
+    content: attr(data-label);
+    color: var(--text-soft);
+    font: 700 0.74rem/1.2 var(--font-body), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
