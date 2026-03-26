@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./DashboardSummary.module.css";
 import { useTriageDemo } from "@/context/TriageDemoContext";
