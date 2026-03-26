@@ -22,19 +22,24 @@ This repository currently focuses on the frontend experience for:
 ## Project Structure
 
 ```text
+src/
+  app/
 frontend/
   src/
-    app/
     components/
 ```
 
 ## Run Locally
 
 ```bash
-cd frontend
 npm install
 npm run dev
 ```
+
+## Deploy on Vercel
+
+The repository root is configured as the deployable Next.js app, so Vercel can
+deploy directly from the repository without changing the Root Directory.
 
 ## Notes
 
